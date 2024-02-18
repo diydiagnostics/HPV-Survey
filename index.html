@@ -17,15 +17,16 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+To determine if an individuals symptoms align with those of a cold or those of allergies. 
  
 Known Issues:
-blah, blah, blah, blah
+can be more accurate with more questions
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-	
+
+<!-- code to set up the html document and its characteristics like title and size-->
    <head> 
       <title>Hello World</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,10 +37,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+	//code initializing and creating variables for allergy count and cold count
         var allergy_count = 0;
         var cold_count = 0;
 	
-        function allergyAdd(){
+        //creating the functions that adds to the appropritate count based on what button is clicked
+	function allergyAdd(){
             allergy_count = allergy_count + 1;
         }
 
@@ -47,10 +50,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
-
+	//creating the function to calculate the final percentages and to display the results
 	function calculateResults(){
 		var a_Percent = allergy_count/4 * 100;
 		var c_Percent = cold_count/4 * 100;
+		//code to alter HTML content
 		var resultText = document.getElementById("results");
 		resultText.innerHTML = "Probability it is allergies =" + a_Percent + "<br> Probability it is a cold =" + c_Percent;
 	}
@@ -58,7 +62,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   </script>
 
 
-
+<!--code to format the pages such as width, height, colors, etc.-->
 <style>	
 .body {
      margin: 0em;
@@ -80,7 +84,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 1;
 }
 </style>
-
+<!-- code to create the header and introductory page -->
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
@@ -95,6 +99,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+<!--code to create page with first question -->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -102,12 +107,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p>
+	<!--creating two buttons with functions attached them which are called if clicked on-->
 	<a href="#two" onclick= "allergyAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
 	<a href="#two" onclick= "coldAdd();"class="w3-btn w3-grey w3-round"> No </a>
     	</div>
 	
 </div>
-
+<!-- code to create page with second question-->
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -115,11 +121,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a fever?</p>
+	<!--creating two buttons with functions attached them which are called if clicked on, but the functions are switched to match appropriate symptoms-->
 	<a href="#three" onclick= "coldAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
 	<a href="#three" onclick= "allergyAdd();"class="w3-btn w3-grey w3-round"> No </a>
 	</div>
 </div>	
-
+	
+<!-- code to create page with third question-->
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -127,11 +135,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a sore throat?</p>
+	<!--creating two buttons with functions attached them which are called if clicked on-->
 	<a href="#four" onclick= "coldAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
 	<a href="#four" onclick= "allergyAdd();"class="w3-btn w3-grey w3-round"> No </a>
 	</div>
 </div>
 
+<!-- code to create page with third question-->
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
@@ -139,12 +149,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Are your symptoms seasonal or chronic?</p>
+	<!--creating two buttons with functions attached them which are called if clicked on-->
 	<a href="#five" onclick= "allergyAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
 	<a href="#five" onclick= "coldAdd();"class="w3-btn w3-grey w3-round"> No </a>
 	</div>
 </div>
 
-
+<!--code to create fifth page which asks user to click button which calculates results -->
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
@@ -152,10 +163,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Click below button to get results!</p>
+	<!-- creating a single button that is linked to the function which calculates the results-->
 	<a href="#six" onclick= "calculateResults();" class="w3-btn w3-grey w3-round"> Calculate Results </a>
 	</div>
 </div>
-	
+
+<!--code to create last page which will show the results to the user-->
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Final Results</h1>
@@ -163,13 +176,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p> Your Results</p>
+	<!-- creating one last button to display the already calculated results-->
 	<a onclick = "calculateResults();" class="w3-btn w3-grey w3-round"> Get Results </a>
 	<p id="results"></p>
 	</div>
 </div>
 
 </div>
-	
+
+<!-- code for the footer of all pages created-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
