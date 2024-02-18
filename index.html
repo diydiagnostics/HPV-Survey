@@ -50,6 +50,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
+
+	function allergyPercent(){
+		a_Percent = cold_count / (cold_count + allergy_count);
+	}
+
+
+	function coldPercent(){
+		c_Percent = allergy_count / (cold_count + allergy_count);
+	}
+
   </script>
 
 
@@ -128,6 +138,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 
 <div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are your symptoms seasonal or chronic?</p>
+	<a href="#results" onclick= "allergyAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#results" onclick= "coldAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+</div>
+
+
+<div class="page" id="results">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
