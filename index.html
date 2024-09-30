@@ -82,7 +82,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-- code to create the header and introductory page, contains a lot of text that will be displayed on page -->
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Need for HPV Diagnostic</h1>
 </div>
 	
 <div id="content" class="w3-container">
@@ -103,10 +103,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
 	<!--display question 1-->
-        <p>Are your eyes watery or itchy?</p>
+        <p>What is your sex assigned at birth?</p>
 	<!--creating two buttons with functions attached them which are called if clicked on-->
-	<a href="#two" onclick= "allergyAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
-	<a href="#two" onclick= "coldAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	<a href="#two" onclick= "hpvAdd();" class="w3-btn w3-grey w3-round"> Male </a>
+	<a href="#two" onclick= "nohpvAdd();"class="w3-btn w3-grey w3-round"> Female </a>
     	</div>
 	
 </div>
@@ -119,10 +119,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<!--display question 2-->
-	<p>Do you have a fever?</p>
+	<p>Are you between the ages of 18-26?</p>
 	<!--creating two buttons with functions attached them which are called if clicked on, but the functions are switched to match appropriate symptoms-->
-	<a href="#three" onclick= "coldAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
-	<a href="#three" onclick= "allergyAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	<a href="#three" onclick= "hpvAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#three" onclick= "nohpvAdd();"class="w3-btn w3-grey w3-round"> No </a>
 	</div>
 </div>	
 	
@@ -135,10 +135,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<!--display question 3-->
-	<p>Do you have a sore throat?</p>
+	<p>Are you of African American descent?</p>
 	<!--creating two buttons with functions attached them which are called if clicked on-->
-	<a href="#four" onclick= "coldAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
-	<a href="#four" onclick= "allergyAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	<a href="#four" onclick= "hpvAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#four" onclick= "nohpvAdd();"class="w3-btn w3-grey w3-round"> No </a>
 	</div>
 </div>
 
@@ -151,13 +151,40 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<!--display question 4-->
-	<p>Are your symptoms seasonal or chronic?</p>
+	<p>Are you sexually active?</p>
 	<!--creating two buttons with functions attached them which are called if clicked on-->
-	<a href="#five" onclick= "allergyAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
-	<a href="#five" onclick= "coldAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	<a href="#five" onclick= "hpvAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#five" onclick= "nohpvAdd();"class="w3-btn w3-grey w3-round"> No </a>
 	</div>
 </div>
 
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<!--creating header-->
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<!--displaying instructions to user-->
+	<p>If you are sexually active, are you currently using any methods to manage your reproductive health? (pills/patches, IUD, injections, implants)</p>
+	<a href="#five" onclick= "nphpvAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#five" onclick= "hpvAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+</div>
+
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<!--creating header-->
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<!--displaying instructions to user-->
+	<p>If you are not sexually active, are you prescribed birth control pills for any other reason?</p>
+	<a href="#five" onclick= "nohpvAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#five" onclick= "hpvAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+</div>
 <!--code to create fifth page which asks user to click button which calculates results -->
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
