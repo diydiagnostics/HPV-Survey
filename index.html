@@ -44,23 +44,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
         /*creating the functions that adds to the appropritate count based on what button is clicked and these 
 	will be called on when button is clicked*/
-	function allergyAdd(){
-            allergy_count = allergy_count + 1;
+	function hpvAdd(){
+            hpv_need = hpv_need + 1;
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function nohpvAdd(){
+            nohpv_need = nohpv_need + 1;
         }
 
 	//creating the function to calculate the final percentages and to display the results
-	function calculateResults(){
-		//creatinig variables to store the calculated percentages, and performing arthmetic to determine these percentages
-		var a_Percent = allergy_count/4 * 100;
-		var c_Percent = cold_count/4 * 100;
-		//code to alter HTML content which will aid in displaying the results in a easy manner
-		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + a_Percent + "<br> Probability it is a cold =" + c_Percent;
-	}
 	
   </script>
 
@@ -79,7 +71,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: -100vw;
     overflow-y: auto;
     z-index: 0;
-    background-color: hsl(0,0%,100%);
+    background-color: hsl(0,0%,50%);
 }
 
   .page:target {
