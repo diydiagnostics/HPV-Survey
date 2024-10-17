@@ -53,7 +53,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 
 	//creating the function to calculate the final percentages and to display the results
-	
+	function calculateResults(){
+		//creatinig variables to store the calculated percentages, and performing arthmetic to determine these percentages
+		var h_Percent = hpv_need/9 * 100;
+		//code to alter HTML content which will aid in displaying the results in a easy manner
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Risk of HPV =" + h_Percent;
+	}
   </script>
 
 
